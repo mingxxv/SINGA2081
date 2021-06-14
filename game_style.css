@@ -1,0 +1,44 @@
+
+h3 {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+div {
+margin: auto;
+width: 60%;
+border: 5px solid purple;
+padding: 10px;
+}
+
+.storyButton {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    text-align: center;
+    color: magenta;
+    background-color: black;
+    border: 1px solid magenta;
+}
+.storyButton:active {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+    background-color: magenta;
+    border: 1px solid magenta;
+}
+
+.navbar {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 150px;
+}
