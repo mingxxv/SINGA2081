@@ -1,22 +1,13 @@
 # SINGA2081
 SEI30 - Project 1 (Individual Game)
 
-```
-███████╗██╗███╗   ██╗ ██████╗  █████╗    
-██╔════╝██║████╗  ██║██╔════╝ ██╔══██╗   
-███████╗██║██╔██╗ ██║██║  ███╗███████║   
-╚════██║██║██║╚██╗██║██║   ██║██╔══██║   
-███████║██║██║ ╚████║╚██████╔╝██║  ██║   
-╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝   
-                                         
-        ██████╗  ██████╗  █████╗  ██╗    
-        ╚════██╗██╔═████╗██╔══██╗███║    
-         █████╔╝██║██╔██║╚█████╔╝╚██║    
-        ██╔═══╝ ████╔╝██║██╔══██╗ ██║    
-        ███████╗╚██████╔╝╚█████╔╝ ██║    
-        ╚══════╝ ╚═════╝  ╚════╝  ╚═╝ 
-                 a game by Gordon Chia
-        ```
+   
+╭━━━┳━━┳━╮╱╭┳━━━┳━━━╮╭━━━┳━━━┳━━━╮╭╮
+┃╭━╮┣┫┣┫┃╰╮┃┃╭━╮┃╭━╮┃┃╭━╮┃╭━╮┃╭━╮┣╯┃
+┃╰━━╮┃┃┃╭╮╰╯┃┃╱╰┫┃╱┃┃╰╯╭╯┃┃┃┃┃╰━╯┣╮┃
+╰━━╮┃┃┃┃┃╰╮┃┃┃╭━┫╰━╯┃╭━╯╭┫┃┃┃┃╭━╮┃┃┃
+┃╰━╯┣┫┣┫┃╱┃┃┃╰┻━┃╭━╮┃┃┃╰━┫╰━╯┃╰━╯┣╯╰╮
+╰━━━┻━━┻╯╱╰━┻━━━┻╯╱╰╯╰━━━┻━━━┻━━━┻━━╯
 
 Produced by Gordon Chia, Student, SG-SEI-30.
 
@@ -29,5 +20,6 @@ However, despite the advancement of technology, megacorporations have taken over
 S1M0N, a veteran cyberwarrior from 2021, wakes up from cryosleep and is tasked by his rebel employers to break into the megacorp’s CTRLPROG (control program), and steal an ancient library known as jQuery, known by all to be the key in manipulating reality.
 
 Getting caught will mean certain death through the $("s1m0n").remove(); function. Will he succeed?
+
 
 
