@@ -27,12 +27,12 @@
 
 <body>
     
-    <div id="navbar">
+    <div id="navBar">
         <!--This div is the static bar which contains the Clue Counter. It does not get removed.-->
         <h3 id="cluebar"></h3>
     </div>
 
-    <div class="mainroom">
+    <div id="mainRoom">
         <!--This div is the main room, from where you can access all other rooms.-->
         <h3>
             You hear a faint whirring sound as your VR implant spins up. The room focuses into view. You are in a
@@ -49,7 +49,7 @@
         <button class="storyButton" id="gokeyRoom">Open Safe</button>
     </div>
 
-    <div class="keyroom">
+    <div id="keyRoom">
         <!--This div contains the key, which is currently locked. You cannot open the keybox without having your clueCounter set to 4-->
         <h3>
             A raised pedestal adorns the centre of the laboratory. There is a black safe on the pedestal, and you catch glimpses of blue light through the hinges.
@@ -58,7 +58,7 @@
         <button class="storyButton backButton">Back to main room</button>
     </div>
 
-    <div class="powerReactor">
+    <div id="powerReactor">
         <!-- This div contains the power reactor. 1 clue, 1 death-->
         <h3>
             You walk over to the power reactor. The surrounding area is warm, and a faint orange glow emits from the machine. There is a note stuck on the reactor, and a big red button.
@@ -68,7 +68,7 @@
         <button class="storyButton backButton">Back to main room</button>
     </div>
 
-    <div class="studyTable">
+    <div id="studyTable">
         <!-- This div contains the study table. 1 clue, 1 death-->
         <h3>
             The table is littered with notes and drawings, on paper ("How old!" you wonder). There is an iMike standard-issue computer on the table.
@@ -78,7 +78,7 @@
         <button class="storyButton backButton">Back to main room</button>
     </div>
 
-    <div class="aiConstruct">
+    <div id="aiConstruct">
         <!-- This div contains the AI construct. 1 clue, no death-->
         <h3>
             You see a female AI, quietly meditating in the corner. 
@@ -86,7 +86,7 @@
         <button class="storyButton" id="ashley">Talk to AI</button>
         <button class="storyButton backButton">Back to main room</button>
     </div>
-    <div class="chemicalStore">
+    <div id="chemicalStore">
         <!-- This div contains the chemical store. 1 clue, 1 death-->
         <h3>
             In the storeroom, there's a small vial left behind on the table.
@@ -96,7 +96,7 @@
         <button class="storyButton backButton">Back to main room</button>
     </div>
 
-    <div class="deathScreen">
+    <div id="deathScreen">
         <h3>You died, and your mind is no more.</h3>
         <button class="storyButton" id="restartBtn">Respawn?</button>
     </div>
