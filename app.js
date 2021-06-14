@@ -15,13 +15,11 @@ $(() => {
 
     }
     $(".backButton").on("click", mainRoomInit); // what if I only declared this ONCE, GLOBALLY.
-    //! ROOM INITS GO HERE
 
     
 
     // NAV BAR Initialization
     const navbarInit = () => {
-        $(".navbar").show();
         $("#cluebar").append("Clues: " + clueCounter);
         
     };
@@ -118,8 +116,31 @@ const keyRoomInit = () => {
 
 
 // Into power reactor button
-
-
+const POWER_REACTOR = "powerReactor"
+const game = {
+    start: MAIN_ROOM,
+    rooms: [
+        {
+            id: POWER_REACTOR,
+            description: `You walk over to the power reactor. The surrounding area is warm, and a faint orange glow emits from the machine. There is a note stuck on the reactor, and a big red button.`,
+            actions: ["Read Note", "Push Button"],
+            exits: [MAIN_ROOM],
+        },
+        {
+            id: MAIN_ROOM,
+            description: `You hear a faint whirring sound as your VR implant spins up. The room focuses into view. You are in a
+            standard laboratory. There is a locked safe in the centre of the room.`,
+            actions: [],
+            exits: [POWER_REACTOR, AI_CONSTRUCT, CHEMICAL_STORE],
+        },
+        {
+            id: AI_CONSTRUCT,
+            description: `You see a female AI, quietly meditating in the corner. `,
+            actions: ["talk to AI"],
+            exits: [MAIN_ROOM],
+        }
+    ]
+}
 
 
 
