@@ -20,6 +20,7 @@ div {
     width: 60%;
     border: 5px solid purple;
     padding: 10px;
+    text-align: center;
 }
 
 button, .storyButton {
@@ -30,6 +31,7 @@ button, .storyButton {
     background-color: black;
     border: 1px solid magenta;
     cursor: pointer;
+    
 }
 button:active, .storyButton:active {
     font-family: 'VT323', monospace;
@@ -48,4 +50,8 @@ button:active, .storyButton:active {
     right: 0px;
     top: 0px;
     width: 150px;
+}
+
+#stageActions {
+    border: 5px solid black;
 }
