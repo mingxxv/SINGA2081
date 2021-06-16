@@ -1,6 +1,6 @@
-let defangIPaddr = function(address) {
-    return address.split('.').join('[.]');
-};
+// let defangIPaddr = function(address) {
+//     return address.split('.').join('[.]');
+// };
 
 anArray = [
     {
@@ -12,7 +12,10 @@ anArray = [
         desc: "lalalala",
     },
 ];
+const y = (anArray) => {
+    return anArray.name === "kumar"
+};
 
-x = anArray.find(name);
+x = anArray.find(y).desc;
 
 console.log(x);
