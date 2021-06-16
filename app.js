@@ -1,7 +1,7 @@
 $(() => {
 
     //! GLOBAL VARIABLES
-    let deathFlag = false;
+    
 
     let currentRoomId = "MAIN_ROOM"
 
@@ -13,12 +13,7 @@ $(() => {
         $("#clueBar").text("Clues: " + readClues.length);
     };
 
-    /**
-     * Resets the game by reloading the page
-     */
-    const resetGame = () => {
-        window.location.reload()
-    }
+    
 
     const game = {
         // start: MAIN_ROOM,
@@ -26,7 +21,7 @@ $(() => {
             MAIN_ROOM: {
                 title: "Main Room",
                 description: `You hear a faint whirring sound as your VR implant spins up. The room focuses into view. You are in a
-                standard laboratory.git`,
+                standard laboratory.`,
                 actions: [],
             },
             POWER_REACTOR: {
@@ -56,22 +51,26 @@ $(() => {
                 title: "Read note",
                 description: `"Dave told me to clean the reactor, but I haven't been paid for 2 months.\nToo bad, I'm not gonna do anything. Who cares about the stupid jQuery library anyway, it's so old!"
                 \n*You take a small circuit board wedged behind the note. This looks like a clue!*`,
+                death: false,
             },
             POWER_BUTTON : {
                 title: "Push Button",
                 description: `A siren sounds as the doors of the machine swing open, bathing you in a blinding flash of light.
                 \nYou hear your skin crackling as the radiation reduces you to dust. Game Over.`,
+                death: true,
             },
             STUDY_NOTES : {
                 title: "Read Study Notes",
                 description: `Despite me repeatedly warning them, corporate refuses to put on greater encryption.
                 \nI'm done. I'm supposed to hide the unlocker device but I'll do it next time. - 27 July 2081, Researcher Farhan, Justin, Sylvester, et al.
                 \n*You take the unlocker device and notice it's missing a few parts*`,
+                death: false,
             },
             STUDY_IMIKE : {
                 title: "Turn on iMike Computer",
                 description: `As the boot sequence of the computer commences, the police break into the room.
                 \nAiming a raygun at you, they fire a .remove() function in your face as you fade from the world. Game Over.`,
+                death: true,
             },
             AI_TALK : {
                 title: "Talk to AI",
@@ -84,11 +83,13 @@ $(() => {
                 title: "Read Label on Vial",
                 description: `"IF THEY FORCE YOU TO HAND OVER THE CIRCUIT BOARD, DROP THE CIRCUIT INTO THIS VIAL AND DRINK IT. YOU'LL DIE, BUT SO WILL THE BOARD."
                 \n*You notice a circuit board stuck under the vial. Looks like you found a clue!*`,
+                death: false,
             },
             CHEM_SMELL : {
                 title: "Smell contents of Vial",
                 description: `You uncork the vial and take a whiff. The vial smells strongly of bitter almonds. A bit of the liquid gets on your lips.
                 \nYou get a headache and notice blood dripping from your nostrils, as you crumple to the ground like a wet newspaper and expire. Game over.`,
+                death: true,
             },
 
 
@@ -97,20 +98,36 @@ $(() => {
         
     }
 
-        
+
+       // Check if the clues have all been found
+
+       const checkWin = () => {
+        if (readClues.length === 4) {
+        alert(`With all the clues in hand, S1M0N assembles the unlocker device, steals the jQuery library, and jacks out of the map.
+        \n You Win!!!`)
+        window.location.href = "/index.html";
+    }
+} 
 
    
 
-    // CLUE READER FUNCTION
+    
+    // THIS ALSO WORKS, BUT NOW WITH DYING FUNCTIONS YAY
     const readRoomClue = (actionId) => {
         if (readClues.includes(actionId)) { 
             alert("Sorry, you've already read this clue.") 
+        } else if (game.actions[actionId].death === true) {
+            alert(game.actions[actionId].description)
+            window.location.reload()
         } else {
             alert(game.actions[actionId].description)
             readClues.push(actionId)
             displayClueBar()
+            checkWin()
         }
     }
+
+
 
     
 
@@ -158,7 +175,7 @@ $(() => {
     /**
      * Displays a room
      * 
-     * @param {*} roomId 
+     * 
      */
     const displayRoom = (roomId) => {
 
@@ -178,16 +195,13 @@ $(() => {
             $("#stageActions").append(button)
         }
 
+        
+
         //  Display the navigation buttons
         displayNavigationButtons()
     }
 
-    // DEATH FUNCTION
-    const deathFunc = () => {
-        ("*").off();
-        $("<div>").text("");
-        $("<div>").text("Game Over. Please refresh the page to restart.");
-    };
+    
 
 
     /**
