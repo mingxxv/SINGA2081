@@ -43,6 +43,11 @@ $(() => {
                 description: `In the storeroom, there's a small vial left behind on the table.`,
                 actions: ["CHEM_READ", "CHEM_SMELL"],
             },
+            SAFE: {
+                title: "jQuery Safe",
+                description: `In the middle of the room, there is a locked safe holding the ancient library of jQuery.`,
+                actions: ["OPEN_SAFE"],
+            },
 
         },
         actions: {
@@ -90,6 +95,12 @@ $(() => {
                 \nYou get a headache and notice blood dripping from your nostrils, as you crumple to the ground like a wet newspaper and expire. Game over.`,
                 death: true,
             },
+            OPEN_SAFE : {
+                title: "Open Safe",
+                description: ``,
+                death: false,
+                win: true,
+            }
 
 
         },
@@ -105,6 +116,8 @@ $(() => {
         alert(`With all the clues in hand, S1M0N assembles the unlocker device, steals the jQuery library, and jacks out of the map.
         \n You Win!!!`)
         window.location.href = "/index.html";
+    } else {
+        alert(`You haven't found all the clues, and can't unlock the box. You slink out of the room, frustrated.`);
     }
 } 
 
@@ -118,11 +131,15 @@ $(() => {
         } else if (game.actions[actionId].death === true) {
             alert(game.actions[actionId].description)
             window.location.reload()
-        } else {
+        } 
+        else if (game.actions[actionId].win === true) {
+            alert("Let's see if you have all the clues.")
+            checkWin()
+        }
+        else {
             alert(game.actions[actionId].description)
             readClues.push(actionId)
             displayClueBar()
-            checkWin()
         }
     }
 
