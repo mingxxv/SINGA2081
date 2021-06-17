@@ -1,7 +1,7 @@
 body {
     text-align: center;
     background-color: black;
-    color: magenta;
+    color: #C72DFF;
     font-size: 40px;
 }
 div {
@@ -13,18 +13,18 @@ div {
 
 .fatass {
     font-family: 'Press Start 2P', cursive;
-    font-size: 24px;
+    font-size: 40px;
     text-align: center;
     color: black;
     background-color: magenta;
     border: 1px solid magenta;
     padding: 5px;
-    margin: 10px;
+    margin: 1px;
 }
 
 .fatass:active {
     font-family: 'Press Start 2P', cursive;
-    font-size: 24px;
+    font-size: 40px;
     text-align: center;
     color: magenta;
     background-color: black;
@@ -32,9 +32,16 @@ div {
     padding: 5px;
 }
 
-h3 {
+h4 {
     font-family: 'VT323', monospace;
-    font-size: 24px;
+    font-size: 48px;
     text-align: center;
     color: magenta;
+}
+
+h3 {
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+    text-align: center;
+    color: white;
 }
