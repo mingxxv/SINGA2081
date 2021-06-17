@@ -111,7 +111,7 @@ $(() => {
    
 
     
-    // THIS ALSO WORKS, BUT NOW WITH DYING FUNCTIONS YAY
+    // Check if clues have been read, or whether the 'clue' leads to death, or whether the clue is an actual clue.
     const readRoomClue = (actionId) => {
         if (readClues.includes(actionId)) { 
             alert("Sorry, you've already read this clue.") 
