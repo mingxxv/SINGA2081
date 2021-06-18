@@ -21,5 +21,24 @@ S1M0N, a veteran cyberwarrior from 2021, wakes up from cryosleep and is tasked b
 
 Getting caught will mean certain death through the $("s1m0n").remove(); function. Will he succeed?
 
+# Overall Game Flow
+
+* The title page shows you the prologue
+* You start in the main room, where the objective is to find the clues in order to steal the library and escape.
+* Some "clues" are actually rigged death buttons - if you die, you restart with no clues.
+* The entire game is point and click, just click the buttons - both to select clues and to move around the rooms.
+
+# Most challenging part
+
+The most challenging part of the project was getting the data structure and planning the functions out. Once that was done, everything just fell into place.
+
+# Further work and next steps
+
+* Change all alerts to jQuery modals
+* Add more sounds
+* Add useless clues, and a rewritable inventory
+
+
+
 
 
